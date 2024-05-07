@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dylan's Portfolio</title>
+<style>
+  /* General Styles */
+  body {
+    font-family: Helvetica, sans-serif;
+    background-color: #000000;
+    margin: 0;
+    color: white;
+  }
+  /* Navbar Styles */
+  #navbar {
+    background-color: #0edacf;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    border-bottom: solid 4px #000000;
+  }
+  #navbar a {
+    color: white;
+    text-align: center;
+    float: right;
+    padding: 14px 30px;
+    font-size: 25px;
+    text-decoration: none;
+    transition: background-color 0.7s ease, color 0.7s ease;
+  }
+  #navbar a:hover {
+    background-color: #000000;
+    color: #0edacf;
+  }
+  /* Welcome Section Styles */
+  #welcome-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 15%;
+    margin-bottom: 40px;
+    overflow: hidden;
+  }
+  .welcome-text {
+    width: 50%;
+    float: left;
+  }
+  #dylan-img {
+    overflow: hidden;
+  }
+  /* Project Section Styles */
+  .project-container {
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: #0edacf;
+    align-items: center;
+  }
+  .project-description {
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    width: 60%;
+  }
+  .project-tile {
+    border: none;
+    background-color: #000000;
+    text-decoration: none;
+    padding: 5px;
+    width: 100px;
+    transition: background 0.1s ease, padding 0.4s ease;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  .project-tile:hover {
+    padding: 10px;
+    box-shadow: 0px 0px 20px #000000;
+  }
+  .project-image {
+    width: 40%;
+    padding: 20px;
+  }
+  .project-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  /* Media Queries */
+  @media screen and (max-width: 600px) {
+    #navbar {
+      position: fixed;
+    }
+    .project-container {
+      flex-direction: column;
+    }
+    .project-image {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <h1>Dylan Kennedy Portfolio</h1>
+    <a href="#contact-section">Contact</a>
+    <a href="#projects">Projects</a>
+    <a href="#welcome-section">About</a>
+  </nav>  
+
+  <!-- Welcome Section -->
+  <section id="welcome-section">
+    <div class="welcome-text">
+      <h1>Hey, I'm Dylan Kennedy</h1>
+      <h2>A Thrid Year Student at Eduvos Completing my Bachelor's in Information Technology</h2>
+    </div>
+    <div id="C:\Users\Dylan\Desktop\Portfolio\img">
+      <img src="./img/Dylan.jpeg" alt="Dylan's Photo" style="width: 300px; border: 7px solid #0edacf; border-radius: 50%;">
+    </div>
+  </section>
+
+
+  <!-- Project Sections -->
+  <section id="projects">
+    <div class="project-container">
+      <div class="project-description">
+        <h3>Arduino Arm</h3>
+        <p>The code provided is a Python script that utilizes the keyboard, os, time, and pyfirmata libraries to control a robotic arm using keyboard inputs. It starts by installing the necessary libraries
+          (keyboard and pyfirmata) using pip commands. The main functionality of the script is to move different parts of the robotic arm based on specific keyboard inputs. For instance, pressing keys
+          like 'o', 'c', 'd', 'a', 'w', 's', '8', '2', '-', '+', '4', and '6' triggers corresponding movements of the gripper, waist, shoulder, elbow, wrist pitch, and wrist roll of the robotic arm.
+          The script continuously checks for keyboard inputs using a while loop and executes the corresponding movement functions based on the pressed keys. Additionally, it prints the angle values of each
+          joint as they change during the movements. The script also sends signals to the Arduino board to control the servo motors connected to the robotic arm's joints. Overall, this code facilitates
+          interactive control of a robotic arm using a keyboard interface, allowing users to manipulate its movements in real-time.</p>
+        <a class="project-tile" href="https://github.com/dckennedy301/Arduino_Arm/blob/main/arm.py" target="_blank">View Code</a>
+      </div>
+      <div class="project-image">
+        <img src="./img/ArduinoArm.jpeg" alt="Arduino Arm">
+      </div>
+    </div>
+    <div class="project-container">
+      <div class="project-description">
+        <h3>Milk Price Prediction Model</h3>
+        <p>The provided code utilizes Python's pandas library to load and preprocess a dataset containing information about powdered milk prices and weights. It then employs scikit-learn, a popular machine
+          learning library, to implement a linear regression model. The data is split into training and testing sets, with 80% used for training and 20% for testing. The linear regression model is trained on the
+          training data to learn the relationship between milk weight (in grams) and price (in Rands). The code calculates and displays the coefficients of the linear regression equation and evaluates the model's
+          performance using the R-squared metric for both the training and testing sets. It also includes visualizations such as scatter plots of actual vs. predicted prices and regression lines to assess the
+          goodness of fit. Finally, the trained model is used to predict the price of a milk can weighing 1500 grams. Overall, the code provides a structured workflow for building, evaluating, and applying a
+          linear regression model to predict powdered milk prices based on weight.</p>
+        <a class="project-tile" href="https://github.com/dckennedy301/Milk-Price-prediction/blob/main/Milk_price_prediction_model.ipynb" target="_blank">View Code</a>
+      </div>
+      <div class="project-image">
+        <img src="./img/LinearRegressionModel.PNG" alt="Milk Price Prediction Model">
+      </div>
+    </div>
+    <div class="project-container">
+      <div class="project-description">
+        <h3>Clustering Model</h3>
+        <p>The code demonstrates a typical workflow for clustering analysis using Python's pandas, matplotlib, scikit-learn, and other libraries. Initially, it imports the
+          necessary modules such as pandas for data handling and matplotlib for visualization. It reads a CSV file containing clustering datasets using pandas and displays
+          the first few rows to get an overview of the data structure.
+
+          Next, the data is preprocessed by handling missing values using the SimpleImputer class from scikit-learn, which replaces missing values with the mean of the column.
+          The data is then standardized using StandardScaler to ensure all features have a mean of 0 and a standard deviation of 1, which is a common preprocessing step in
+          clustering algorithms.
+          
+          The code then proceeds to determine the optimal number of clusters using two different methods: silhouette scores and the elbow method. Silhouette scores are
+          calculated for a range of cluster sizes to evaluate the compactness and separation of clusters. The elbow method, on the other hand, calculates the within-cluster
+          sum of squares (inertia) for different cluster sizes, aiming to find a point where adding more clusters doesn't significantly reduce inertia.
+          
+          Based on these analyses, the code selects an optimal number of clusters (in this case, 3 clusters) and performs K-means clustering using the KMeans class from
+          scikit-learn. The clustered data is visualized using a scatter plot, with each data point colored according to its assigned cluster label, creating a clear
+          representation of the clustering results.
+          
+          Overall, the code demonstrates a structured approach to data preprocessing, cluster analysis, and visualization, providing insights into the distribution and
+          grouping of data points within the dataset.</p>
+        <a class="project-tile" href="https://github.com/dckennedy301/Clustering-Model/blob/main/Clustering_Model.ipynb" target="_blank">View Code</a>
+      </div>
+      <div class="project-image">
+        <img src="./img/ClusteringModel.jpg" alt="Clustering Model">
+      </div>
+    </div>
+    <div class="project-container">
+      <div class="project-description">
+        <h3>Diabetes Prediction Model</h3>
+        <p>The provided code is a Python script for building and evaluating a k-Nearest Neighbors (KNN) classifier model using the Scikit-Learn library. It starts by importing necessary libraries such as 
+          NumPy for numerical computations, Pandas for data manipulation, and modules from Scikit-Learn for machine learning tasks. The script then loads data from a CSV file named 'diabetes.csv' into a 
+          Pandas DataFrame. Missing values in the dataset, if any, are handled by filling them with the mean of their respective columns.
+
+          Next, the data is divided into input features and target variables, and a standard train-test split is performed using the train_test_split function from Scikit-Learn. Feature scaling is applied 
+          to standardize the features using the StandardScaler class. The script then uses GridSearchCV for hyperparameter tuning to find the best value for the number of neighbors (n_neighbors) in the KNN 
+          algorithm. The best KNN model is trained on the training data and evaluated on the testing data using metrics such as the confusion matrix, accuracy score, and F1 score.
+          
+          Finally, the script demonstrates making class predictions for new data points. It creates two sets of new data, scales them using the same scaler used for training, and predicts their classes 
+          using the best KNN model. The class predictions for the new data points are printed to the console. Overall, this code provides a structured approach to building, tuning, evaluating, and using 
+          a KNN classifier for diabetes prediction or classification tasks.</p>
+        <a class="project-tile" href="https://github.com/dckennedy301/Diabetes-Prediction-Model/blob/main/DiabetesPrediction.ipynb" target="_blank">View Code</a>
+      </div>
+      <div class="project-image">
+        <img src="./img/Diabetes.PNG" alt="Malaria Detection Model Using OpenCV">
+      </div>
+    </div>
+    <div class="project-container">
+      <div class="project-description">
+        <h3>Genetic Algorithm</h3>
+        <p>The code implements a Genetic Algorithm (GA) for solving a Traveling Salesman Problem (TSP) variant, where stations are modeled as objects and the objective is to find the shortest path that
+          visits each station exactly once and returns to the starting station (root). The GA starts by defining a Station class to represent each station's coordinates and name. It also includes functions for
+          calculating distances between stations, generating crossover and mutation operations, and evaluating the objective function based on the total distance traveled.
+
+          The GA operation begins by loading station locations from a CSV file and initializing parameters such as the maximum number of generations (MaxGen), proportions for selecting parents
+          (br, er, xr), mutation rates (mf, mr), and a generation limit. The GA then iteratively creates populations of potential solutions (sequences of station visits), evaluates their fitness (total distance),
+          and selects elite parents based on their fitness scores.
+          
+          The crossover operation combines genetic information from two parents to create new children, simulating genetic recombination. Mutation introduces diversity by randomly altering a small number of
+          elements in a sequence. The algorithm evolves over generations, with new populations inheriting traits from the fittest individuals (elite) and undergoing crossover and mutation to explore new solutions.
+          
+          The main loop runs for a specified number of generations (gen_limit) and tracks the best individual (shortest path) found so far. After completion, it outputs the best individual's sequence,
+          representing the optimal route that visits all stations and returns to the root station, solving the TSP variant for the given station locations.</p>
+        <a class="project-tile" href="https://github.com/dckennedy301/Genetic-algorithms/blob/main/Genetic-algorithms.ipynb" target="_blank">View Code</a>
+      </div>
+      <div class="project-image">
+        <img src="./img/GA.PNG" alt="Genetic Algorithm">
+      </div>
+    </div>
+    <div class="project-container">
+      <div class="project-description">
+        <h3>Malaria Detection Model Using TensorFlow</h3>
+        <p>The provided code utilizes TensorFlow and Keras to create and train a convolutional neural network (CNN) for image classification. First, it imports necessary libraries like 
+          Pandas, NumPy, Matplotlib, Seaborn, and TensorFlow. Then, it loads image data using tf.keras.utils.image_dataset_from_directory from a specified directory, splitting it into training and validation 
+          sets with a 80/20 split and applies preprocessing such as shuffling, resizing, and batching. It also normalizes the pixel values of the images.
+
+          Next, it defines the CNN architecture using Sequential model from Keras, consisting of convolutional layers with activation functions like ReLU, max-pooling layers, dropout layers for regularization, 
+          and a final dense layer with a sigmoid activation for binary classification. The model is compiled with Adam optimizer, binary crossentropy loss function, and accuracy as the evaluation metric.
+          
+          The training process involves fitting the model to the training data with a specified number of epochs and early stopping callback to prevent overfitting. After training, it plots and visualizes 
+          the training and validation accuracy as well as the training and validation loss over the epochs using Matplotlib. This code essentially sets up and trains a CNN model for binary image classification 
+          and provides visualizations to assess its performance.</p>
+        <a class="project-tile" href="https://github.com/dckennedy301/Malaria_Model/blob/main/Malaria_Model.ipynb" target="_blank">View Code</a>
+      </div>
+      <div class="project-image">
+        <img src="./img/TMalariaModel.PNG" alt="Malaria Detection Model Using TensorFlow">
+      </div>
+    </div>
+    <div class="project-container">
+      <div class="project-description">
+        <h3>Malaria Detection Model Using OpenCV</h3>
+        <p>The code provided is for a machine learning model designed to classify cell images as either parasitized (defective) or uninfected (defectless). It begins by importing necessary libraries and 
+          defining functions for image feature extraction, image enhancement, and loading/preprocessing images. Key image enhancement techniques include bilateral filtering, median blurring, mean blurring, 
+          and contrast stretching. The load_and_preprocess_images function loads images from specified folders, enhances them, extracts features using edge detection or HOG, and prepares them for training.
+
+          The code then loads the images, displays sample images from each category, and preprocesses the data for training. It uses StandardScaler for data normalization and splits the data into 
+          training and testing sets. Two classifiers, MLPClassifier and SVM Classifier, are trained and evaluated using metrics like accuracy, precision, recall, and F1 score. Finally, the code generates a 
+          bar chart comparing the performance metrics of the two classifiers, providing a visual representation of their effectiveness in classifying parasitized and uninfected cell images.</p>
+        <a class="project-tile" href="https://github.com/dckennedy301/Malaria-Model-OpenCV/blob/main/Malaria_alt.ipynb" target="_blank">View Code</a>
+      </div>
+      <div class="project-image">
+        <img src="./img/MalariaCV.PNG" alt="Malaria Detection Model Using OpenCV">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact-section">
+    <div class="contact-section" id="contact">
+      <h1>Here's My Contact Info</h1>
+      <h2><a href="https://github.com/dckennedy301" target="_blank">GitHub Profile</a></h2>
+      <h2><a href="https://www.linkedin.com/in/dylan-kennedy-4b2940251/" target="_blank">LinkedIn Profile</a></h2>
+      <h2><a href="CV_of_Mr._Dylan_Kennedy.pdf" target="_blank">CV</a></h2>
+      <h2><a href="./Bachelor of Science in Information Technology (Robotics).pdf" target="_blank">Field of Study Robotics</a></h2>
+      <h2><a href="./Bachelor of Science-Information Technology (Data Science).pdf" target="_blank">Field of Study Data Science</a></h2>
+    </div>
+  </section>
+</body>
+</html>
