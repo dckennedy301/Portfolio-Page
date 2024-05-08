@@ -8,7 +8,7 @@
   /* General Styles */
   body {
     font-family: Helvetica, sans-serif;
-    background-color: #000000;
+    background-color: #585858;
     margin: 0;
     color: white;
   }
@@ -19,7 +19,7 @@
     position: fixed;
     overflow: hidden;
     top: 0;
-    border-bottom: solid 4px #000000;
+    border-bottom: solid 4px #585858;
   }
   #navbar a {
     color: white;
@@ -31,33 +31,51 @@
     transition: background-color 0.7s ease, color 0.7s ease;
   }
   #navbar a:hover {
-    background-color: #000000;
+    background-color: #585858;
     color: #0edacf;
   }
   /* Welcome Section Styles */
   #welcome-section {
-    height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
     padding-left: 15%;
+    padding-right: 15%;
     margin-bottom: 40px;
     overflow: hidden;
   }
   .welcome-text {
-    width: 50%;
-    float: left;
+    margin-top: 100px;
+    width: 45%; /* Adjusted width */
   }
-  #dylan-img {
-    overflow: hidden;
+  .welcome-image {
+    margin-top: 200px;
+    width: 45%; /* Adjusted width */
+    text-align: right; /* Align image to the right */
   }
+  .welcome-image img {
+    width: 100%;
+    border: 7px solid #0edacf;
+    border-radius: 50%;
+  }
+
   /* Project Section Styles */
+  #projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .project-container {
     display: flex;
     margin-top: 100px;
     margin-bottom: 100px;
     background-color: #0edacf;
     align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    width: 95%;
   }
   .project-description {
     color: white;
@@ -69,7 +87,7 @@
   }
   .project-tile {
     border: none;
-    background-color: #000000;
+    background-color: #585858;
     text-decoration: none;
     padding: 5px;
     width: 100px;
@@ -82,7 +100,7 @@
   }
   .project-tile:hover {
     padding: 10px;
-    box-shadow: 0px 0px 20px #000000;
+    box-shadow: 0px 0px 20px #585858;
   }
   .project-image {
     width: 40%;
@@ -93,6 +111,7 @@
     height: auto;
     display: block;
   }
+
   /* Media Queries */
   @media screen and (max-width: 600px) {
     #navbar {
@@ -105,6 +124,44 @@
       width: 100%;
     }
   }
+
+  /* Contact Section Styles */
+  #contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure full viewport height */
+    background-color: #585858; /* Background color for contact section */
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: #0edacf;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    width: 95%;
+    padding: 20px;
+  }
+  .contact-section h1 {
+    margin-bottom: 20px;
+  }
+  .contact-section h2 {
+    margin-bottom: 10px;
+  }
+  .contact-section a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  .contact-section a:hover {
+    text-decoration: underline;
+  }
+  
 </style>
 </head>
 <body>
