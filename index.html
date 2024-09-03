@@ -201,6 +201,18 @@
   <section id="projects">
     <div class="project-container">
       <div class="project-description">
+        <h3>Brain Tumour Detection Model</h3>
+        <p>The brain tumor detection model utilizes a pre-trained ResNet-50 convolutional neural network (CNN) in PyTorch to classify MRI images into four categories: Glioma, Meningioma, NoTumor, and Pituitary.
+          The model preprocesses images by resizing them to 256x256 pixels and converting them into tensors, with training and validation datasets loaded using PyTorch’s DataLoader. A visual inspection of the
+          images ensures correct labeling and loading before training.
+          The ResNet-50 model is fine-tuned through transfer learning, modifying its fully connected layer to fit the number of classes in the dataset. The model is trained over 20 epochs using Cross-Entropy
+          Loss and the Adam optimizer, with performance tracked through accuracy and loss metrics. These metrics are plotted to assess model performance and ensure it is training effectively. Post-training,
+          a confusion matrix evaluates the model’s classification accuracy across different classes, and the model is saved for future use.
+          This project demonstrates a practical application of CNNs in medical imaging, reflecting current best practices in the field and showcasing the potential of deep learning to enhance diagnostic accuracy
+          and efficiency.</p>
+        <a class="project-tile" href="https://github.com/dckennedy301/DS-project/blob/main/Brain_Tumor_detection.ipynb" target="_blank">View Code</a>
+      </div>
+      <div class="project-description">
         <h3>Arduino Arm</h3>
         <p>The code provided is a Python script that utilizes the keyboard, os, time, and pyfirmata libraries to control a robotic arm using keyboard inputs. It starts by installing the necessary libraries
           (keyboard and pyfirmata) using pip commands. The main functionality of the script is to move different parts of the robotic arm based on specific keyboard inputs. For instance, pressing keys
