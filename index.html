@@ -197,8 +197,7 @@
   </section>
 
 
-  <!-- Project Sections -->
- <!-- Project Sections -->
+<!-- Project Sections -->
 <section id="projects">
   <!-- Brain Tumor Detection Model Project -->
   <div class="project-container">
@@ -206,35 +205,31 @@
       <h3>Brain Tumor Detection Model</h3>
       <p>The brain tumor detection model utilizes a pre-trained ResNet-50 convolutional neural network (CNN) in PyTorch to classify MRI images into four categories: Glioma, Meningioma, NoTumor, and Pituitary.
         The model preprocesses images by resizing them to 256x256 pixels and converting them into tensors, with training and validation datasets loaded using PyTorch’s DataLoader. A visual inspection of the
-        images ensures correct labeling and loading before training.
-        The ResNet-50 model is fine-tuned through transfer learning, modifying its fully connected layer to fit the number of classes in the dataset. The model is trained over 20 epochs using Cross-Entropy
-        Loss and the Adam optimizer, with performance tracked through accuracy and loss metrics. These metrics are plotted to assess model performance and ensure it is training effectively. Post-training,
-        a confusion matrix evaluates the model’s classification accuracy across different classes, and the model is saved for future use.
-        This project demonstrates a practical application of CNNs in medical imaging, reflecting current best practices in the field and showcasing the potential of deep learning to enhance diagnostic accuracy
-        and efficiency.</p>
+        images ensures correct labeling and loading before training. The ResNet-50 model is fine-tuned through transfer learning, modifying its fully connected layer to fit the number of classes in the dataset.
+        The model is trained over 20 epochs using Cross-Entropy Loss and the Adam optimizer, with performance tracked through accuracy and loss metrics. These metrics are plotted to assess model performance and
+        ensure it is training effectively. Post-training, a confusion matrix evaluates the model’s classification accuracy across different classes, and the model is saved for future use. This project demonstrates
+        a practical application of CNNs in medical imaging, reflecting current best practices in the field and showcasing the potential of deep learning to enhance diagnostic accuracy and efficiency.</p>
       <a class="project-tile" href="https://github.com/dckennedy301/DS-project/blob/main/Brain_Tumor_detection.ipynb" target="_blank">View Code</a>
     </div>
     <div class="project-image">
-      <img src="img/ArduinoArm.jpeg" alt="Brain Tumour Detection">
+      <img src="img/tumour.png" alt="Brain Tumor Detection Model">
+    </div>
   </div>
 
   <!-- Arduino Arm Project -->
   <div class="project-container">
     <div class="project-description">
       <h3>Arduino Arm</h3>
-      <p>The code provided is a Python script that utilizes the keyboard, os, time, and pyfirmata libraries to control a robotic arm using keyboard inputs. It starts by installing the necessary libraries
-        (keyboard and pyfirmata) using pip commands. The main functionality of the script is to move different parts of the robotic arm based on specific keyboard inputs. For instance, pressing keys
-        like 'o', 'c', 'd', 'a', 'w', 's', '8', '2', '-', '+', '4', and '6' triggers corresponding movements of the gripper, waist, shoulder, elbow, wrist pitch, and wrist roll of the robotic arm.
-        The script continuously checks for keyboard inputs using a while loop and executes the corresponding movement functions based on the pressed keys. Additionally, it prints the angle values of each
-        joint as they change during the movements. The script also sends signals to the Arduino board to control the servo motors connected to the robotic arm's joints. Overall, this code facilitates
-        interactive control of a robotic arm using a keyboard interface, allowing users to manipulate its movements in real-time.</p>
+      <p>The Arduino Arm project involves a Python script that utilizes libraries like keyboard, os, time, and pyfirmata to control a robotic arm via keyboard inputs. The script allows users to move different parts
+        of the robotic arm based on specific key presses. It continuously monitors keyboard inputs and triggers corresponding movements for the gripper, waist, shoulder, elbow, and wrist joints. The script also prints
+        the angle values of each joint during movement and sends signals to the Arduino board to control the servo motors. This project showcases interactive control of a robotic arm, allowing users to manipulate its
+        movements in real-time using a keyboard interface.</p>
       <a class="project-tile" href="https://github.com/dckennedy301/Arduino_Arm/blob/main/arm.py" target="_blank">View Code</a>
     </div>
     <div class="project-image">
       <img src="img/ArduinoArm.jpeg" alt="Arduino Arm">
     </div>
   </div>
-</section>
 
     <div class="project-container">
       <div class="project-description">
