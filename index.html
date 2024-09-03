@@ -52,7 +52,7 @@
     justify-content: space-between;
     padding-left: 15%;
     padding-right: 15%;
-    margin-top: 250px;
+    margin-top: 100px; /* Reduced from 250px to 100px */
     margin-bottom: 150px;
     overflow: hidden;
   }
@@ -203,40 +203,41 @@
     </div>
   </section>
 
-<!-- Project Sections -->
-<section id="projects">
-  <!-- Brain Tumor Detection Model Project -->
-  <div class="project-container">
-    <div class="project-description">
-      <h3>Brain Tumor Detection Model</h3>
-      <p>The brain tumor detection model utilizes a pre-trained ResNet-50 convolutional neural network (CNN) in PyTorch to classify MRI images into four categories: Glioma, Meningioma, NoTumor, and Pituitary.
-        The model preprocesses images by resizing them to 256x256 pixels and converting them into tensors, with training and validation datasets loaded using PyTorch’s DataLoader. A visual inspection of the
-        images ensures correct labeling and loading before training. The ResNet-50 model is fine-tuned through transfer learning, modifying its fully connected layer to fit the number of classes in the dataset.
-        The model is trained over 20 epochs using Cross-Entropy Loss and the Adam optimizer, with performance tracked through accuracy and loss metrics. These metrics are plotted to assess model performance and
-        ensure it is training effectively. Post-training, a confusion matrix evaluates the model’s classification accuracy across different classes, and the model is saved for future use. This project demonstrates
-        a practical application of CNNs in medical imaging, reflecting current best practices in the field and showcasing the potential of deep learning to enhance diagnostic accuracy and efficiency.</p>
-      <a class="project-tile" href="https://github.com/dckennedy301/DS-project/blob/main/Brain_Tumor_detection.ipynb" target="_blank">View Code</a>
+  <!-- Project Sections -->
+  <section id="projects">
+    <!-- Brain Tumor Detection Model Project -->
+    <div class="project-container">
+      <div class="project-description">
+        <h3>Brain Tumor Detection Model</h3>
+        <p>The brain tumor detection model utilizes a pre-trained ResNet-50 convolutional neural network (CNN) in PyTorch to classify MRI images into four categories: Glioma, Meningioma, NoTumor, and Pituitary.
+          The model preprocesses images by resizing them to 256x256 pixels and converting them into tensors, with training and validation datasets loaded using PyTorch’s DataLoader. A visual inspection of the
+          images ensures correct labeling and loading before training. The ResNet-50 model is fine-tuned through transfer learning, modifying its fully connected layer to fit the number of classes in the dataset.
+          The model is trained over 20 epochs using Cross-Entropy Loss and the Adam optimizer, with performance tracked through accuracy and loss metrics. These metrics are plotted to assess model performance and
+          ensure it is training effectively. Post-training, a confusion matrix evaluates the model’s classification accuracy across different classes, and the model is saved for future use. This project demonstrates
+          a practical application of CNNs in medical imaging, reflecting current best practices in the field and showcasing the potential of deep learning to enhance diagnostic accuracy and efficiency.</p>
+        <a class="project-tile" href="https://github.com/dckennedy301/DS-project/blob/main/Brain_Tumor_detection.ipynb" target="_blank">View Code</a>
+      </div>
+      <div class="project-image">
+        <img src="img/tumour.png" alt="Brain Tumor Detection Model">
+      </div>
     </div>
-    <div class="project-image">
-      <img src="img/tumour.png" alt="Brain Tumor Detection Model">
-    </div>
-  </div>
 
-  <!-- Arduino Arm Project -->
-  <div class="project-container">
-    <div class="project-description">
-      <h3>Arduino Arm</h3>
-      <p>The Arduino Arm project involves a Python script that utilizes libraries like keyboard, os, time, and pyfirmata to control a robotic arm via keyboard inputs. The script allows users to move different parts
-        of the robotic arm based on specific key presses. It continuously monitors keyboard inputs and triggers corresponding movements for the gripper, waist, shoulder, elbow, and wrist joints. The script also prints
-        the angle values of each joint during movement and sends signals to the Arduino board to control the servo motors. This project showcases interactive control of a robotic arm, allowing users to manipulate its
-        movements in real-time using a keyboard interface.</p>
-      <a class="project-tile" href="https://github.com/dckennedy301/Arduino_Arm/blob/main/arm.py" target="_blank">View Code</a>
+    <!-- Arduino Arm Project -->
+    <div class="project-container">
+      <div class="project-description">
+        <h3>Arduino Arm</h3>
+        <p>The Arduino Arm project involves a Python script that utilizes libraries like keyboard, os, time, and pyfirmata to control a robotic arm via keyboard inputs. The script allows users to move different parts
+          of the robotic arm based on specific key presses. It continuously monitors keyboard inputs and triggers corresponding movements for the gripper, waist, shoulder, elbow, and wrist joints. The script also prints
+          the angle values of each joint during movement and sends signals to the Arduino board to control the servo motors. This project showcases interactive control of a robotic arm, allowing users to manipulate its
+          movements in real-time using a keyboard interface.</p>
+        <a class="project-tile" href="https://github.com/dckennedy301/Arduino_Arm/blob/main/arm.py" target="_blank">View Code</a>
+      </div>
+      <div class="project-image">
+        <img src="img/ArduinoArm.jpeg" alt="Arduino Arm">
+      </div>
     </div>
-    <div class="project-image">
-      <img src="img/ArduinoArm.jpeg" alt="Arduino Arm">
-    </div>
-  </div>
 
+    <!-- Milk Price Prediction Model Project -->
     <div class="project-container">
       <div class="project-description">
         <h3>Milk Price Prediction Model</h3>
@@ -252,6 +253,8 @@
         <img src="img/LinearRegressionModel.PNG" alt="Milk Price Prediction Model">
       </div>
     </div>
+
+    <!-- Clustering Model Project -->
     <div class="project-container">
       <div class="project-description">
         <h3>Clustering Model</h3>
@@ -279,6 +282,8 @@
         <img src="img/Clustering.png" alt="Clustering Model">
       </div>
     </div>
+
+    <!-- Diabetes Prediction Model Project -->
     <div class="project-container">
       <div class="project-description">
         <h3>Diabetes Prediction Model</h3>
@@ -296,9 +301,11 @@
         <a class="project-tile" href="https://github.com/dckennedy301/Diabetes-Prediction-Model/blob/main/DiabetesPrediction.ipynb" target="_blank">View Code</a>
       </div>
       <div class="project-image">
-        <img src="img/Diabetes.PNG" alt="Malaria Detection Model Using OpenCV">
+        <img src="img/Diabetes.PNG" alt="Diabetes Prediction Model">
       </div>
     </div>
+
+    <!-- Genetic Algorithm Project -->
     <div class="project-container">
       <div class="project-description">
         <h3>Genetic Algorithm</h3>
@@ -321,44 +328,23 @@
         <img src="img/GA.PNG" alt="Genetic Algorithm">
       </div>
     </div>
+
+    <!-- Malaria Detection Model Using TensorFlow Project -->
     <div class="project-container">
       <div class="project-description">
         <h3>Malaria Detection Model Using TensorFlow</h3>
-        <p>The provided code utilizes TensorFlow and Keras to create and train a convolutional neural network (CNN) for image classification. First, it imports necessary libraries like 
-          Pandas, NumPy, Matplotlib, Seaborn, and TensorFlow. Then, it loads image data using tf.keras.utils.image_dataset_from_directory from a specified directory, splitting it into training and validation 
-          sets with a 80/20 split and applies preprocessing such as shuffling, resizing, and batching. It also normalizes the pixel values of the images.
-
-          Next, it defines the CNN architecture using Sequential model from Keras, consisting of convolutional layers with activation functions like ReLU, max-pooling layers, dropout layers for regularization, 
-          and a final dense layer with a sigmoid activation for binary classification. The model is compiled with Adam optimizer, binary crossentropy loss function, and accuracy as the evaluation metric.
-          
-          The training process involves fitting the model to the training data with a specified number of epochs and early stopping callback to prevent overfitting. After training, it plots and visualizes 
-          the training and validation accuracy as well as the training and validation loss over the epochs using Matplotlib. This code essentially sets up and trains a CNN model for binary image classification 
-          and provides visualizations to assess its performance.</p>
+        <p>The Malaria Detection Model uses TensorFlow and Keras to build a convolutional neural network (CNN) for classifying cell images as either parasitized or uninfected. The model is trained on a dataset of cell
+          images, with preprocessing steps including image resizing, normalization, and augmentation. The model's performance is evaluated using accuracy and loss metrics, and visualizations are provided to assess the
+          model's effectiveness. This project highlights the application of CNNs in medical image classification tasks.</p>
         <a class="project-tile" href="https://github.com/dckennedy301/Malaria_Model/blob/main/Malaria_Model.ipynb" target="_blank">View Code</a>
       </div>
       <div class="project-image">
         <img src="img/TMalariaModel.PNG" alt="Malaria Detection Model Using TensorFlow">
       </div>
     </div>
-    <div class="project-container">
-      <div class="project-description">
-        <h3>Malaria Detection Model Using OpenCV</h3>
-        <p>The code provided is for a machine learning model designed to classify cell images as either parasitized (defective) or uninfected (defectless). It begins by importing necessary libraries and 
-          defining functions for image feature extraction, image enhancement, and loading/preprocessing images. Key image enhancement techniques include bilateral filtering, median blurring, mean blurring, 
-          and contrast stretching. The load_and_preprocess_images function loads images from specified folders, enhances them, extracts features using edge detection or HOG, and prepares them for training.
-
-          The code then loads the images, displays sample images from each category, and preprocesses the data for training. It uses StandardScaler for data normalization and splits the data into 
-          training and testing sets. Two classifiers, MLPClassifier and SVM Classifier, are trained and evaluated using metrics like accuracy, precision, recall, and F1 score. Finally, the code generates a 
-          bar chart comparing the performance metrics of the two classifiers, providing a visual representation of their effectiveness in classifying parasitized and uninfected cell images.</p>
-        <a class="project-tile" href="https://github.com/dckennedy301/Malaria-Model-OpenCV/blob/main/Malaria_alt.ipynb" target="_blank">View Code</a>
-      </div>
-      <div class="project-image">
-        <img src="img/MalariaCV.PNG" alt="Malaria Detection Model Using OpenCV">
-      </div>
-    </div>
   </section>
 
-   <!-- Contact Section -->
+  <!-- Contact Section -->
   <section id="contact-section">
     <div class="contact-container" id="contact">
       <h1>Here's My Contact Info</h1>
