@@ -12,6 +12,7 @@
     margin: 0;
     color: white;
   }
+
   /* Navbar Styles */
   #navbar {
     background-color: #0edacf;
@@ -20,11 +21,20 @@
     overflow: hidden;
     top: 0;
     border-bottom: solid 4px #585858;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  #navbar h1 {
+    margin: 0;
+    font-size: 30px;
+    flex-grow: 1;
+    text-align: center;
   }
   #navbar a {
     color: white;
     text-align: center;
-    float: right;
     padding: 14px 30px;
     font-size: 25px;
     text-decoration: none;
@@ -34,6 +44,7 @@
     background-color: #585858;
     color: #0edacf;
   }
+
   /* Welcome Section Styles */
   #welcome-section {
     display: flex;
@@ -162,16 +173,12 @@
     text-decoration: underline;
   }
 </style>
-  
-</style>
 </head>
 <body>
   <!-- Navbar -->
   <nav id="navbar">
     <h1>Dylan Kennedy Portfolio</h1>
     <a href="#contact-section">Contact</a>
-    <a href="#projects">Projects</a>
-    <a href="#welcome-section">About</a>
   </nav>  
 
   <!-- Welcome Section -->
@@ -179,23 +186,22 @@
     <div class="welcome-text">
       <h1>Hey, I'm Dylan Kennedy</h1>
       <h2>
-        I am thrid year student, and<br> 
-          a dedicated and ambitious individual<br> 
-          currently pursuing a Bachelor of Science<br> 
-          in Information Technology with a focus on<br> 
-          Data Science and Robotics at Eduvos, expected<br> 
-          to graduate in December 2024. My educational<br> 
-          journey includes a National Senior Certificate<br>
-          from Overkruin High School, and I have further<br> 
-          enhanced my technical skills by obtaining<br> 
-          a CompTIA A+ certification in February 2023.
+        I am a third-year student and<br> 
+        a dedicated and ambitious individual<br> 
+        currently pursuing a Bachelor of Science<br> 
+        in Information Technology with a focus on<br> 
+        Data Science and Robotics at Eduvos, expected<br> 
+        to graduate in December 2024. My educational<br> 
+        journey includes a National Senior Certificate<br>
+        from Overkruin High School, and I have further<br> 
+        enhanced my technical skills by obtaining<br> 
+        a CompTIA A+ certification in February 2023.
       </h2>
     </div>
-    <div id="img/Dylan.jpeg">
-      <img src="img/Dylan.jpeg" alt="Dylan's Photo" style="width: 300px; border: 7px solid #0edacf; border-radius: 50%;">
+    <div class="welcome-image">
+      <img src="img/Dylan.jpeg" alt="Dylan's Photo">
     </div>
   </section>
-
 
 <!-- Project Sections -->
 <section id="projects">
@@ -352,9 +358,9 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
+   <!-- Contact Section -->
   <section id="contact-section">
-    <div class="contact-section" id="contact">
+    <div class="contact-container" id="contact">
       <h1>Here's My Contact Info</h1>
       <h2><a href="https://github.com/dckennedy301" target="_blank">GitHub Profile</a></h2>
       <h2><a href="https://www.linkedin.com/in/dylan-kennedy-4b2940251/" target="_blank">LinkedIn Profile</a></h2>
