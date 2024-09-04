@@ -6,13 +6,15 @@
   <link rel="icon" type="image/x-icon" href="/img/DK.ico">
   <title>Dylan Kennedy | Portfolio</title>
   <style>
+    /* General Styles */
     body {
-      font-family: 'Helvetica', sans-serif;
-      background-color: #000;
-      color: #fff;
+      font-family: 'Arial', sans-serif;
+      background-color: #fff;
+      color: #333;
       margin: 0;
     }
 
+    /* Navbar Styles */
     #navbar {
       background-color: #0edacf;
       position: fixed;
@@ -47,31 +49,71 @@
       color: #0edacf;
     }
 
-    #welcome-section {
+    /* Hero Section */
+    .hero-section {
+      height: 100vh;
+      background: url('img/Dylan.jpeg') no-repeat center center/cover;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      padding: 80px 15%;
-      margin-top: 70px;
+      text-align: center;
+      color: white;
     }
 
-    .welcome-text h1 {
+    .hero-section h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin: 0;
+      padding: 0 20px;
+    }
+
+    .hero-section p {
+      font-size: 1.5rem;
+      margin: 20px 0;
+      padding: 0 20px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      color: #fff;
+      background-color: #0071e3;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border-radius: 50px;
+      margin: 0 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .buttons a:hover {
+      background-color: #005bb5;
+    }
+
+    /* Info Section */
+    .info-section {
+      padding: 80px 20px;
+      background-color: #f7f7f7;
+      text-align: center;
+    }
+
+    .info-section h2 {
       font-size: 2.5rem;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
+      color: #333;
     }
 
-    .welcome-text h2 {
-      font-size: 1.25rem;
+    .info-section p {
+      font-size: 1.2rem;
       line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto;
+      color: #555;
     }
 
-    .welcome-image img {
-      width: 100%;
-      max-width: 300px;
-      border: 7px solid #0edacf;
-      border-radius: 50%;
-    }
-
+    /* Project Section */
     #projects {
       padding: 0 10%;
       text-align: center;
@@ -91,6 +133,7 @@
     .project-description {
       flex: 1;
       padding: 20px;
+      text-align: left;
     }
 
     .project-description h3 {
@@ -101,7 +144,6 @@
     .project-description p {
       font-size: 1rem;
       line-height: 1.6;
-      text-align: left;
     }
 
     .project-tile {
@@ -133,6 +175,7 @@
       border-radius: 8px;
     }
 
+    /* Degree Section */
     #degree-section {
       padding: 40px 10%;
       background-color: #1a1a1a;
@@ -179,6 +222,7 @@
       color: #0edacf;
     }
 
+    /* Contact Section */
     #contact-section {
       background-color: #585858;
       padding: 30px 0;
@@ -206,6 +250,7 @@
       text-decoration: underline;
     }
 
+    /* Responsive Design */
     @media screen and (max-width: 768px) {
       #welcome-section {
         flex-direction: column;
@@ -240,49 +285,40 @@
     <a href="#contact-section">Contact</a>
   </nav>
 
-  <!-- Welcome Section -->
-  <section id="welcome-section">
-    <div class="welcome-text">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div>
       <h1>Hello, I'm Dylan Kennedy</h1>
-      <h2>
+      <p>
         I am a third-year student pursuing a BSc in Information Technology with a focus on Data Science and Robotics. I aim to graduate in December 2024, 
-        and I have a strong technical background with certifications like CompTIA A+. Welcome to my portfolio showcasing my key projects.
-      </h2>
-    </div>
-    <div class="welcome-image">
-      <img src="img/Dylan.jpeg" alt="Dylan Kennedy">
+        and I have a strong technical background with certifications like CompTIA A+.
+      </p>
+      <div class="buttons">
+        <a href="#projects">Explore Projects</a>
+      </div>
     </div>
   </section>
 
-   <!-- Project Sections -->
+  <!-- Projects Section -->
   <section id="projects">
     <!-- Brain Tumor Detection Model Project -->
-   <div class="project-container">
-  <div class="project-description">
-    <h3>Brain Tumor Detection Model</h3>
-    <p>The brain tumor detection model utilizes a pre-trained ResNet-50 convolutional neural network (CNN) in PyTorch to classify MRI images into four categories: Glioma, Meningioma, NoTumor, and Pituitary.
-      The model preprocesses images by resizing them to 256x256 pixels and converting them into tensors, with training and validation datasets loaded using PyTorch’s DataLoader. A visual inspection of the
-      images ensures correct labeling and loading before training. The ResNet-50 model is fine-tuned through transfer learning, modifying its fully connected layer to fit the number of classes in the dataset.
-      The model is trained over 20 epochs using Cross-Entropy Loss and the Adam optimizer, with performance tracked through accuracy and loss metrics. These metrics are plotted to assess model performance and
-      ensure it is training effectively. Post-training, a confusion matrix evaluates the model’s classification accuracy across different classes, and the model is saved for future use. This project
-      demonstrates a practical application of CNNs in medical imaging, reflecting current best practices in the field and showcasing the potential of deep learning to enhance diagnostic accuracy and efficiency.</p>
-    <a class="project-tile" href="https://github.com/dckennedy301/DS-project/blob/main/Brain_Tumor_detection.ipynb" target="_blank">View Code</a>
-    <!-- View Demo Button -->
-    <a class="project-tile" href="YOUR_DEMO_LINK_HERE" target="_blank">View Demo</a>
-  </div>
-  <div class="project-image">
-    <img src="img/tumour.png" alt="Brain Tumor Detection">
-  </div>
-</div>
+    <div class="project-container">
+      <div class="project-description">
+        <h3>Brain Tumor Detection Model</h3>
+        <p>The brain tumor detection model utilizes a pre-trained ResNet-50 convolutional neural network (CNN) in PyTorch to classify MRI images into four categories: Glioma, Meningioma, NoTumor, and Pituitary.</p>
+        <a class="project-tile" href="https://github.com/dckennedy301/DS-project/blob/main/Brain_Tumor_detection.ipynb" target="_blank">View Code</a>
+        <a class="project-tile" href="YOUR_DEMO_LINK_HERE" target="_blank">View Demo</a>
+      </div>
+      <div class="project-image">
+        <img src="img/tumour.png" alt="Brain Tumor Detection">
+      </div>
+    </div>
 
     <!-- Arduino Arm Project -->
     <div class="project-container">
       <div class="project-description">
         <h3>Arduino Arm</h3>
-        <p>The Arduino Arm project involves a Python script that utilizes libraries like keyboard, os, time, and pyfirmata to control a robotic arm via keyboard inputs. The script allows users to move different parts
-          of the robotic arm based on specific key presses. It continuously monitors keyboard inputs and triggers corresponding movements for the gripper, waist, shoulder, elbow, and wrist joints. The script also prints
-          the angle values of each joint during movement and sends signals to the Arduino board to control the servo motors. This project showcases interactive control of a robotic arm, allowing users to manipulate its
-          movements in real-time using a keyboard interface.</p>
+        <p>The Arduino Arm project involves a Python script to control a robotic arm via keyboard inputs using libraries like pyfirmata. This project showcases interactive control of a robotic arm in real-time.</p>
         <a class="project-tile" href="https://github.com/dckennedy301/Arduino_Arm/blob/main/arm.py" target="_blank">View Code</a>
       </div>
       <div class="project-image">
@@ -290,111 +326,7 @@
       </div>
     </div>
 
-    <!-- Milk Price Prediction Model Project -->
-    <div class="project-container">
-      <div class="project-description">
-        <h3>Milk Price Prediction Model</h3>
-        <p>The provided code utilizes Python's pandas library to load and preprocess a dataset containing information about powdered milk prices and weights. It then employs scikit-learn, a popular machine
-          learning library, to implement a linear regression model. The data is split into training and testing sets, with 80% used for training and 20% for testing. The linear regression model is trained on the
-          training data to learn the relationship between milk weight (in grams) and price (in Rands). The code calculates and displays the coefficients of the linear regression equation and evaluates the model's
-          performance using the R-squared metric for both the training and testing sets. It also includes visualizations such as scatter plots of actual vs. predicted prices and regression lines to assess the
-          goodness of fit. Finally, the trained model is used to predict the price of a milk can weighing 1500 grams. Overall, the code provides a structured workflow for building, evaluating, and applying a
-          linear regression model to predict powdered milk prices based on weight.</p>
-        <a class="project-tile" href="https://github.com/dckennedy301/Milk-Price-prediction/blob/main/Milk_price_prediction_model.ipynb" target="_blank">View Code</a>
-      </div>
-      <div class="project-image">
-        <img src="img/LinearRegressionModel.PNG" alt="Milk Price Prediction Model">
-      </div>
-    </div>
-
-    <!-- Clustering Model Project -->
-    <div class="project-container">
-      <div class="project-description">
-        <h3>Clustering Model</h3>
-        <p>The code demonstrates a typical workflow for clustering analysis using Python's pandas, matplotlib, scikit-learn, and other libraries. Initially, it imports the
-          necessary modules such as pandas for data handling and matplotlib for visualization. It reads a CSV file containing clustering datasets using pandas and displays
-          the first few rows to get an overview of the data structure.
-
-          Next, the data is preprocessed by handling missing values using the SimpleImputer class from scikit-learn, which replaces missing values with the mean of the column.
-          The data is then standardized using StandardScaler to ensure all features have a mean of 0 and a standard deviation of 1, which is a common preprocessing step in
-          clustering algorithms.
-          
-          The code then proceeds to determine the optimal number of clusters using two different methods: silhouette scores and the elbow method. Silhouette scores are
-          calculated for a range of cluster sizes to evaluate the compactness and separation of clusters. The elbow method, on the other hand, calculates the within-cluster
-          sum of squares (inertia) for different cluster sizes, aiming to find a point where adding more clusters doesn't significantly reduce inertia.
-          
-          Based on these analyses, the code selects an optimal number of clusters (in this case, 3 clusters) and performs K-means clustering using the KMeans class from
-          scikit-learn. The clustered data is visualized using a scatter plot, with each data point colored according to its assigned cluster label, creating a clear
-          representation of the clustering results.
-          
-          Overall, the code demonstrates a structured approach to data preprocessing, cluster analysis, and visualization, providing insights into the distribution and
-          grouping of data points within the dataset.</p>
-        <a class="project-tile" href="https://github.com/dckennedy301/Clustering-Model/blob/main/Clustering_Model.ipynb" target="_blank">View Code</a>
-      </div>
-      <div class="project-image">
-        <img src="img/Clustering.png" alt="Clustering Model">
-      </div>
-    </div>
-
-    <!-- Diabetes Prediction Model Project -->
-    <div class="project-container">
-      <div class="project-description">
-        <h3>Diabetes Prediction Model</h3>
-        <p>The provided code is a Python script for building and evaluating a k-Nearest Neighbors (KNN) classifier model using the Scikit-Learn library. It starts by importing necessary libraries such as 
-          NumPy for numerical computations, Pandas for data manipulation, and modules from Scikit-Learn for machine learning tasks. The script then loads data from a CSV file named 'diabetes.csv' into a 
-          Pandas DataFrame. Missing values in the dataset, if any, are handled by filling them with the mean of their respective columns.
-
-          Next, the data is divided into input features and target variables, and a standard train-test split is performed using the train_test_split function from Scikit-Learn. Feature scaling is applied 
-          to standardize the features using the StandardScaler class. The script then uses GridSearchCV for hyperparameter tuning to find the best value for the number of neighbors (n_neighbors) in the KNN 
-          algorithm. The best KNN model is trained on the training data and evaluated on the testing data using metrics such as the confusion matrix, accuracy score, and F1 score.
-          
-          Finally, the script demonstrates making class predictions for new data points. It creates two sets of new data, scales them using the same scaler used for training, and predicts their classes 
-          using the best KNN model. The class predictions for the new data points are printed to the console. Overall, this code provides a structured approach to building, tuning, evaluating, and using 
-          a KNN classifier for diabetes prediction or classification tasks.</p>
-        <a class="project-tile" href="https://github.com/dckennedy301/Diabetes-Prediction-Model/blob/main/DiabetesPrediction.ipynb" target="_blank">View Code</a>
-      </div>
-      <div class="project-image">
-        <img src="img/Diabetes.PNG" alt="Diabetes Prediction Model">
-      </div>
-    </div>
-
-    <!-- Genetic Algorithm Project -->
-    <div class="project-container">
-      <div class="project-description">
-        <h3>Genetic Algorithm</h3>
-        <p>The code implements a Genetic Algorithm (GA) for solving a Traveling Salesman Problem (TSP) variant, where stations are modeled as objects and the objective is to find the shortest path that
-          visits each station exactly once and returns to the starting station (root). The GA starts by defining a Station class to represent each station's coordinates and name. It also includes functions for
-          calculating distances between stations, generating crossover and mutation operations, and evaluating the objective function based on the total distance traveled.
-
-          The GA operation begins by loading station locations from a CSV file and initializing parameters such as the maximum number of generations (MaxGen), proportions for selecting parents
-          (br, er, xr), mutation rates (mf, mr), and a generation limit. The GA then iteratively creates populations of potential solutions (sequences of station visits), evaluates their fitness (total distance),
-          and selects elite parents based on their fitness scores.
-          
-          The crossover operation combines genetic information from two parents to create new children, simulating genetic recombination. Mutation introduces diversity by randomly altering a small number of
-          elements in a sequence. The algorithm evolves over generations, with new populations inheriting traits from the fittest individuals (elite) and undergoing crossover and mutation to explore new solutions.
-          
-          The main loop runs for a specified number of generations (gen_limit) and tracks the best individual (shortest path) found so far. After completion, it outputs the best individual's sequence,
-          representing the optimal route that visits all stations and returns to the root station, solving the TSP variant for the given station locations.</p>
-        <a class="project-tile" href="https://github.com/dckennedy301/Genetic-algorithms/blob/main/Genetic-algorithms.ipynb" target="_blank">View Code</a>
-      </div>
-      <div class="project-image">
-        <img src="img/GA.PNG" alt="Genetic Algorithm">
-      </div>
-    </div>
-
-    <!-- Malaria Detection Model Using TensorFlow Project -->
-    <div class="project-container">
-      <div class="project-description">
-        <h3>Malaria Detection Model Using TensorFlow</h3>
-        <p>The Malaria Detection Model uses TensorFlow and Keras to build a convolutional neural network (CNN) for classifying cell images as either parasitized or uninfected. The model is trained on a dataset of cell
-          images, with preprocessing steps including image resizing, normalization, and augmentation. The model's performance is evaluated using accuracy and loss metrics, and visualizations are provided to assess the
-          model's effectiveness. This project highlights the application of CNNs in medical image classification tasks.</p>
-        <a class="project-tile" href="https://github.com/dckennedy301/Malaria_Model/blob/main/Malaria_Model.ipynb" target="_blank">View Code</a>
-      </div>
-      <div class="project-image">
-        <img src="img/TMalariaModel.PNG" alt="Malaria Detection Model Using TensorFlow">
-      </div>
-    </div>
+    <!-- Add other projects here -->
   </section>
 
   <!-- Degree Brochures Section -->
