@@ -9,8 +9,8 @@
     /* General Styles */
     body {
       font-family: 'Arial', sans-serif;
-      background-color: #fff;
-      color: #333;
+      background-color: #000; /* Change background color to black */
+      color: #fff;
       margin: 0;
     }
 
@@ -56,10 +56,11 @@
       background-size: cover;
       display: flex;
       justify-content: center;
-      align-items: center;
-      text-align: center;
+      align-items: flex-start; /* Align items to the top */
       color: white;
       position: relative;
+      padding-top: 150px; /* Move content down */
+      background-color: #000; /* Ensure background remains black */
     }
 
     .hero-section h1 {
@@ -99,12 +100,12 @@
       padding: 80px 20px;
       background-color: #f7f7f7;
       text-align: center;
+      color: #333;
     }
 
     .info-section h2 {
       font-size: 2.5rem;
       margin-bottom: 20px;
-      color: #333;
     }
 
     .info-section p {
@@ -112,7 +113,6 @@
       line-height: 1.6;
       max-width: 900px;
       margin: 0 auto;
-      color: #555;
     }
 
     /* Project Section */
