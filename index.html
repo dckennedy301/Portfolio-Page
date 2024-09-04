@@ -1,359 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/x-icon" href="/img/DK.ico">
-<title>Dylan's Portfolio</title>
-<style>
-  /* General Styles */
-  body {
-    font-family: Helvetica, sans-serif;
-    background-color: #000000;
-    margin: 0;
-    color: white;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/img/DK.ico">
+  <title>Dylan Kennedy | Portfolio</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Helvetica', sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+    }
 
-  /* Navbar Styles */
-  #navbar {
-    background-color: #0edacf;
-    width: 100%;
-    position: fixed;
-    overflow: hidden;
-    top: 0;
-    border-bottom: solid 4px #000000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
-  #navbar h1 {
-    margin: 0;
-    font-size: 30px;
-    flex-grow: 1;
-    text-align: center;
-  }
-  #navbar a {
-    color: white;
-    text-align: center;
-    padding: 14px 30px;
-    font-size: 25px;
-    text-decoration: none;
-    transition: background-color 0.7s ease, color 0.7s ease;
-  }
-  #navbar a:hover {
-    background-color: #585858;
-    color: #0edacf;
-  }
-
-   /* Welcome Section Styles */
-  #welcome-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 15%;
-    padding-right: 15%;
-    margin-top: 75px; /* Further reduced the margin-top */
-    margin-bottom: 150px;
-    overflow: hidden;
-  }
-  .welcome-text {
-    margin-top: 50px; /* Removed the additional top margin */
-    width: 45%;
-  }
-  .welcome-image {
-    margin-top: 75px; /* Removed the additional top margin */
-    width: 45%;
-  }
-  .welcome-image img {
-    width: 100%;
-    border: 7px solid #0edacf;
-    border-radius: 50%;
-  }
-
-  /* Project Section Styles */
-  #projects {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .project-container {
-    display: flex;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    background-color: #0edacf;
-    align-items: center;
-    border-radius: 10px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-    width: 95%;
-  }
-  .project-description {
-    color: white;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    font-size: 20px;
-    width: 60%;
-  }
-  .project-tile {
-    border: none;
-    background-color: #585858;
-    text-decoration: none;
-    padding: 5px;
-    width: 100px;
-    transition: background 0.1s ease, padding 0.4s ease;
-    cursor: pointer;
-    font-size: 18px;
-    color: white;
-    display: inline-block;
-    margin-top: 10px;
-  }
-  .project-tile:hover {
-    padding: 10px;
-    box-shadow: 0px 0px 20px #585858;
-  }
-  .project-image {
-    width: 40%;
-    padding: 20px;
-  }
-  .project-image img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  /* Media Queries */
-  @media screen and (max-width: 600px) {
+    /* Navbar Styles */
     #navbar {
+      background-color: #0edacf;
       position: fixed;
-    }
-    .project-container {
-      flex-direction: column;
-    }
-    .project-image {
       width: 100%;
+      top: 0;
+      padding: 10px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 4px solid #000;
+      z-index: 1000;
     }
-  }
 
-  /* Contact Section Styles */
-  #contact-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #585858;
-  }
+    #navbar h1 {
+      margin: 0;
+      font-size: 28px;
+      text-align: center;
+      flex-grow: 1;
+    }
 
-  .contact-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    background-color: #0edacf;
-    border-radius: 10px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-    width: 95%;
-    padding: 20px;
-  }
-  .contact-section h1 {
-    margin-bottom: 20px;
-  }
-  .contact-section h2 {
-    margin-bottom: 10px;
-  }
-  .contact-section a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  .contact-section a:hover {
-    text-decoration: underline;
-  }
-</style>
+    #navbar a {
+      color: #fff;
+      text-align: center;
+      padding: 14px 20px;
+      font-size: 18px;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    #navbar a:hover {
+      background-color: #585858;
+      color: #0edacf;
+    }
+
+    /* Welcome Section */
+    #welcome-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 80px 15%;
+      margin-top: 70px;
+    }
+
+    .welcome-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .welcome-text h2 {
+      font-size: 1.25rem;
+      line-height: 1.6;
+    }
+
+    .welcome-image img {
+      width: 100%;
+      max-width: 300px;
+      border: 7px solid #0edacf;
+      border-radius: 50%;
+    }
+
+    /* Project Section */
+    #projects {
+      padding: 0 10%;
+      text-align: center;
+    }
+
+    .project-container {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 60px 0;
+      padding: 20px;
+      background-color: #0edacf;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .project-description {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .project-description h3 {
+      font-size: 1.75rem;
+      margin-bottom: 10px;
+    }
+
+    .project-description p {
+      font-size: 1rem;
+      line-height: 1.6;
+      text-align: left;
+    }
+
+    .project-tile {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #585858;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: padding 0.2s ease, background 0.3s ease;
+    }
+
+    .project-tile:hover {
+      background-color: #fff;
+      color: #0edacf;
+      padding: 12px 24px;
+    }
+
+    .project-image {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .project-image img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    /* Contact Section */
+    #contact-section {
+      background-color: #585858;
+      padding: 60px 0;
+      text-align: center;
+      color: #fff;
+    }
+
+    .contact-container h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-container h2 {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+
+    .contact-container a {
+      color: #0edacf;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+
+    .contact-container a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+      #welcome-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .project-container {
+        flex-direction: column;
+        padding: 15px;
+      }
+
+      .project-image img {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Navbar -->
   <nav id="navbar">
     <h1>Dylan Kennedy Portfolio</h1>
     <a href="#contact-section">Contact</a>
-  </nav>  
+  </nav>
 
   <!-- Welcome Section -->
   <section id="welcome-section">
     <div class="welcome-text">
-      <h1>Hey, I'm Dylan Kennedy</h1>
+      <h1>Hello, I'm Dylan Kennedy</h1>
       <h2>
-        I am a third-year student and<br> 
-        a dedicated and ambitious individual<br> 
-        currently pursuing a Bachelor of Science<br> 
-        in Information Technology with a focus on<br> 
-        Data Science and Robotics at Eduvos, expected<br> 
-        to graduate in December 2024. My educational<br> 
-        journey includes a National Senior Certificate<br>
-        from Overkruin High School, and I have further<br> 
-        enhanced my technical skills by obtaining<br> 
-        a CompTIA A+ certification in February 2023.
+        I am a third-year student pursuing a BSc in Information Technology with a focus on Data Science and Robotics. I aim to graduate in December 2024, 
+        and I have a strong technical background with certifications like CompTIA A+. Welcome to my portfolio showcasing my key projects.
       </h2>
     </div>
     <div class="welcome-image">
-      <img src="img/Dylan.jpeg" alt="Dylan's Photo">
+      <img src="img/Dylan.jpeg" alt="Dylan Kennedy">
     </div>
   </section>
 
-  <!-- Project Sections -->
+  <!-- Projects Section -->
   <section id="projects">
-    <!-- Brain Tumor Detection Model Project -->
+    <!-- Project example -->
     <div class="project-container">
       <div class="project-description">
         <h3>Brain Tumor Detection Model</h3>
-        <p>The brain tumor detection model utilizes a pre-trained ResNet-50 convolutional neural network (CNN) in PyTorch to classify MRI images into four categories: Glioma, Meningioma, NoTumor, and Pituitary.
-          The model preprocesses images by resizing them to 256x256 pixels and converting them into tensors, with training and validation datasets loaded using PyTorch’s DataLoader. A visual inspection of the
-          images ensures correct labeling and loading before training. The ResNet-50 model is fine-tuned through transfer learning, modifying its fully connected layer to fit the number of classes in the dataset.
-          The model is trained over 20 epochs using Cross-Entropy Loss and the Adam optimizer, with performance tracked through accuracy and loss metrics. These metrics are plotted to assess model performance and
-          ensure it is training effectively. Post-training, a confusion matrix evaluates the model’s classification accuracy across different classes, and the model is saved for future use. This project demonstrates
-          a practical application of CNNs in medical imaging, reflecting current best practices in the field and showcasing the potential of deep learning to enhance diagnostic accuracy and efficiency.</p>
+        <p>This project uses a ResNet-50 model in PyTorch to classify MRI brain scans into four categories. The model was fine-tuned using transfer learning and trained with Cross-Entropy Loss over 20 epochs.</p>
         <a class="project-tile" href="https://github.com/dckennedy301/DS-project/blob/main/Brain_Tumor_detection.ipynb" target="_blank">View Code</a>
       </div>
       <div class="project-image">
-        <img src="img/tumour.png" alt="Brain Tumor Detection Model">
+        <img src="img/tumour.png" alt="Brain Tumor Detection">
       </div>
     </div>
 
-    <!-- Arduino Arm Project -->
+    <!-- Add additional projects here -->
     <div class="project-container">
       <div class="project-description">
         <h3>Arduino Arm</h3>
-        <p>The Arduino Arm project involves a Python script that utilizes libraries like keyboard, os, time, and pyfirmata to control a robotic arm via keyboard inputs. The script allows users to move different parts
-          of the robotic arm based on specific key presses. It continuously monitors keyboard inputs and triggers corresponding movements for the gripper, waist, shoulder, elbow, and wrist joints. The script also prints
-          the angle values of each joint during movement and sends signals to the Arduino board to control the servo motors. This project showcases interactive control of a robotic arm, allowing users to manipulate its
-          movements in real-time using a keyboard interface.</p>
+        <p>The Arduino Arm project involves a Python script to control a robotic arm via keyboard inputs using libraries like pyfirmata. This project showcases interactive control of a robotic arm in real-time.</p>
         <a class="project-tile" href="https://github.com/dckennedy301/Arduino_Arm/blob/main/arm.py" target="_blank">View Code</a>
       </div>
       <div class="project-image">
         <img src="img/ArduinoArm.jpeg" alt="Arduino Arm">
       </div>
     </div>
-
-    <!-- Milk Price Prediction Model Project -->
+    
     <div class="project-container">
       <div class="project-description">
-        <h3>Milk Price Prediction Model</h3>
-        <p>The provided code utilizes Python's pandas library to load and preprocess a dataset containing information about powdered milk prices and weights. It then employs scikit-learn, a popular machine
-          learning library, to implement a linear regression model. The data is split into training and testing sets, with 80% used for training and 20% for testing. The linear regression model is trained on the
-          training data to learn the relationship between milk weight (in grams) and price (in Rands). The code calculates and displays the coefficients of the linear regression equation and evaluates the model's
-          performance using the R-squared metric for both the training and testing sets. It also includes visualizations such as scatter plots of actual vs. predicted prices and regression lines to assess the
-          goodness of fit. Finally, the trained model is used to predict the price of a milk can weighing 1500 grams. Overall, the code provides a structured workflow for building, evaluating, and applying a
-          linear regression model to predict powdered milk prices based on weight.</p>
-        <a class="project-tile" href="https://github.com/dckennedy301/Milk-Price-prediction/blob/main/Milk_price_prediction_model.ipynb" target="_blank">View Code</a>
-      </div>
-      <div class="project-image">
-        <img src="img/LinearRegressionModel.PNG" alt="Milk Price Prediction Model">
-      </div>
-    </div>
-
-    <!-- Clustering Model Project -->
-    <div class="project-container">
-      <div class="project-description">
-        <h3>Clustering Model</h3>
-        <p>The code demonstrates a typical workflow for clustering analysis using Python's pandas, matplotlib, scikit-learn, and other libraries. Initially, it imports the
-          necessary modules such as pandas for data handling and matplotlib for visualization. It reads a CSV file containing clustering datasets using pandas and displays
-          the first few rows to get an overview of the data structure.
-
-          Next, the data is preprocessed by handling missing values using the SimpleImputer class from scikit-learn, which replaces missing values with the mean of the column.
-          The data is then standardized using StandardScaler to ensure all features have a mean of 0 and a standard deviation of 1, which is a common preprocessing step in
-          clustering algorithms.
-          
-          The code then proceeds to determine the optimal number of clusters using two different methods: silhouette scores and the elbow method. Silhouette scores are
-          calculated for a range of cluster sizes to evaluate the compactness and separation of clusters. The elbow method, on the other hand, calculates the within-cluster
-          sum of squares (inertia) for different cluster sizes, aiming to find a point where adding more clusters doesn't significantly reduce inertia.
-          
-          Based on these analyses, the code selects an optimal number of clusters (in this case, 3 clusters) and performs K-means clustering using the KMeans class from
-          scikit-learn. The clustered data is visualized using a scatter plot, with each data point colored according to its assigned cluster label, creating a clear
-          representation of the clustering results.
-          
-          Overall, the code demonstrates a structured approach to data preprocessing, cluster analysis, and visualization, providing insights into the distribution and
-          grouping of data points within the dataset.</p>
-        <a class="project-tile" href="https://github.com/dckennedy301/Clustering-Model/blob/main/Clustering_Model.ipynb" target="_blank">View Code</a>
-      </div>
-      <div class="project-image">
-        <img src="img/Clustering.png" alt="Clustering Model">
-      </div>
-    </div>
-
-    <!-- Diabetes Prediction Model Project -->
-    <div class="project-container">
-      <div class="project-description">
-        <h3>Diabetes Prediction Model</h3>
-        <p>The provided code is a Python script for building and evaluating a k-Nearest Neighbors (KNN) classifier model using the Scikit-Learn library. It starts by importing necessary libraries such as 
-          NumPy for numerical computations, Pandas for data manipulation, and modules from Scikit-Learn for machine learning tasks. The script then loads data from a CSV file named 'diabetes.csv' into a 
-          Pandas DataFrame. Missing values in the dataset, if any, are handled by filling them with the mean of their respective columns.
-
-          Next, the data is divided into input features and target variables, and a standard train-test split is performed using the train_test_split function from Scikit-Learn. Feature scaling is applied 
-          to standardize the features using the StandardScaler class. The script then uses GridSearchCV for hyperparameter tuning to find the best value for the number of neighbors (n_neighbors) in the KNN 
-          algorithm. The best KNN model is trained on the training data and evaluated on the testing data using metrics such as the confusion matrix, accuracy score, and F1 score.
-          
-          Finally, the script demonstrates making class predictions for new data points. It creates two sets of new data, scales them using the same scaler used for training, and predicts their classes 
-          using the best KNN model. The class predictions for the new data points are printed to the console. Overall, this code provides a structured approach to building, tuning, evaluating, and using 
-          a KNN classifier for diabetes prediction or classification tasks.</p>
-        <a class="project-tile" href="https://github.com/dckennedy301/Diabetes-Prediction-Model/blob/main/DiabetesPrediction.ipynb" target="_blank">View Code</a>
-      </div>
-      <div class="project-image">
-        <img src="img/Diabetes.PNG" alt="Diabetes Prediction Model">
-      </div>
-    </div>
-
-    <!-- Genetic Algorithm Project -->
-    <div class="project-container">
-      <div class="project-description">
-        <h3>Genetic Algorithm</h3>
-        <p>The code implements a Genetic Algorithm (GA) for solving a Traveling Salesman Problem (TSP) variant, where stations are modeled as objects and the objective is to find the shortest path that
-          visits each station exactly once and returns to the starting station (root). The GA starts by defining a Station class to represent each station's coordinates and name. It also includes functions for
-          calculating distances between stations, generating crossover and mutation operations, and evaluating the objective function based on the total distance traveled.
-
-          The GA operation begins by loading station locations from a CSV file and initializing parameters such as the maximum number of generations (MaxGen), proportions for selecting parents
-          (br, er, xr), mutation rates (mf, mr), and a generation limit. The GA then iteratively creates populations of potential solutions (sequences of station visits), evaluates their fitness (total distance),
-          and selects elite parents based on their fitness scores.
-          
-          The crossover operation combines genetic information from two parents to create new children, simulating genetic recombination. Mutation introduces diversity by randomly altering a small number of
-          elements in a sequence. The algorithm evolves over generations, with new populations inheriting traits from the fittest individuals (elite) and undergoing crossover and mutation to explore new solutions.
-          
-          The main loop runs for a specified number of generations (gen_limit) and tracks the best individual (shortest path) found so far. After completion, it outputs the best individual's sequence,
-          representing the optimal route that visits all stations and returns to the root station, solving the TSP variant for the given station locations.</p>
-        <a class="project-tile" href="https://github.com/dckennedy301/Genetic-algorithms/blob/main/Genetic-algorithms.ipynb" target="_blank">View Code</a>
-      </div>
-      <div class="project-image">
-        <img src="img/GA.PNG" alt="Genetic Algorithm">
-      </div>
-    </div>
-
-    <!-- Malaria Detection Model Using TensorFlow Project -->
-    <div class="project-container">
-      <div class="project-description">
-        <h3>Malaria Detection Model Using TensorFlow</h3>
-        <p>The Malaria Detection Model uses TensorFlow and Keras to build a convolutional neural network (CNN) for classifying cell images as either parasitized or uninfected. The model is trained on a dataset of cell
-          images, with preprocessing steps including image resizing, normalization, and augmentation. The model's performance is evaluated using accuracy and loss metrics, and visualizations are provided to assess the
-          model's effectiveness. This project highlights the application of CNNs in medical image classification tasks.</p>
+        <h3>Malaria Detection Model</h3>
+        <p>The Malaria Detection Model uses TensorFlow and Keras to classify cell images as either parasitized or uninfected. This project highlights CNNs in medical image classification.</p>
         <a class="project-tile" href="https://github.com/dckennedy301/Malaria_Model/blob/main/Malaria_Model.ipynb" target="_blank">View Code</a>
       </div>
       <div class="project-image">
-        <img src="img/TMalariaModel.PNG" alt="Malaria Detection Model Using TensorFlow">
+        <img src="img/TMalariaModel.PNG" alt="Malaria Detection Model">
       </div>
     </div>
+
   </section>
 
   <!-- Contact Section -->
   <section id="contact-section">
-    <div class="contact-container" id="contact">
-      <h1>Here's My Contact Info</h1>
+    <div class="contact-container">
+      <h1>Contact Me</h1>
       <h2><a href="https://github.com/dckennedy301" target="_blank">GitHub Profile</a></h2>
       <h2><a href="https://www.linkedin.com/in/dylan-kennedy-4b2940251/" target="_blank">LinkedIn Profile</a></h2>
-      <h2><a href="CV of Mr. Dylan Kennedy.pdf" target="_blank">CV</a></h2>
-      <h2><a href="Bachelor of Science in Information Technology (Robotics).pdf" target="_blank">Field of Study Robotics</a></h2>
-      <h2><a href="Bachelor of Science-Information Technology (Data Science).pdf" target="_blank">Field of Study Data Science</a></h2>
     </div>
   </section>
 </body>
