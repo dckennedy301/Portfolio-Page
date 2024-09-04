@@ -137,27 +137,74 @@
       border-radius: 8px;
     }
 
-    /* Contact Section */
+    /* Degree Brochures Section */
+    #degree-section {
+      padding: 40px 10%;
+      background-color: #1a1a1a;
+      text-align: center;
+      color: #fff;
+    }
+
+    .degree-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .degree-item {
+      flex: 1;
+      margin: 20px;
+      padding: 20px;
+      background-color: #0edacf;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    .degree-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .degree-item a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #585858;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+
+    .degree-item a:hover {
+      background-color: #fff;
+      color: #0edacf;
+    }
+
+    /* Contact Section (Smaller) */
     #contact-section {
       background-color: #585858;
-      padding: 60px 0;
+      padding: 30px 0;
       text-align: center;
       color: #fff;
     }
 
     .contact-container h1 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+      font-size: 1.75rem;
+      margin-bottom: 10px;
     }
 
     .contact-container h2 {
-      font-size: 1.2rem;
-      margin: 10px 0;
+      font-size: 1rem;
+      margin: 5px 0;
     }
 
     .contact-container a {
       color: #0edacf;
-      font-size: 1.1rem;
+      font-size: 1rem;
       text-decoration: none;
     }
 
@@ -180,6 +227,15 @@
       .project-image img {
         width: 80%;
         margin: 0 auto;
+      }
+
+      .degree-container {
+        flex-direction: column;
+      }
+
+      .degree-item {
+        width: 80%;
+        margin: 10px auto;
       }
     }
   </style>
@@ -241,7 +297,24 @@
         <img src="img/TMalariaModel.PNG" alt="Malaria Detection Model">
       </div>
     </div>
+  </section>
 
+  <!-- Degree Brochures Section -->
+  <section id="degree-section">
+    <h1>My Degree Brochures</h1>
+    <div class="degree-container">
+      <!-- Degree 1 -->
+      <div class="degree-item">
+        <img src="img/DataScienceBrochure.png" alt="Data Science Brochure">
+        <a href="Bachelor of Science-Information Technology (Data Science).pdf" target="_blank">View Data Science Degree</a>
+      </div>
+
+      <!-- Degree 2 -->
+      <div class="degree-item">
+        <img src="img/RoboticsBrochure.png" alt="Robotics Brochure">
+        <a href="Bachelor of Science in Information Technology (Robotics).pdf" target="_blank">View Robotics Degree</a>
+      </div>
+    </div>
   </section>
 
   <!-- Contact Section -->
