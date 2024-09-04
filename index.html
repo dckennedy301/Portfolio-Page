@@ -52,12 +52,14 @@
     /* Hero Section */
     .hero-section {
       height: 100vh;
-      background: url('img/Dylan.jpeg') no-repeat center center/cover;
+      background: url('img/Dylan.jpeg') no-repeat center center;
+      background-size: cover;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
       color: white;
+      position: relative;
     }
 
     .hero-section h1 {
@@ -252,28 +254,17 @@
 
     /* Responsive Design */
     @media screen and (max-width: 768px) {
-      #welcome-section {
-        flex-direction: column;
-        text-align: center;
+      .hero-section h1 {
+        font-size: 2.5rem;
       }
 
-      .project-container {
-        flex-direction: column;
-        padding: 15px;
+      .hero-section p {
+        font-size: 1.2rem;
       }
 
-      .project-image img {
-        width: 80%;
-        margin: 0 auto;
-      }
-
-      .degree-container {
-        flex-direction: column;
-      }
-
-      .degree-item {
-        width: 80%;
-        margin: 10px auto;
+      .buttons a {
+        padding: 10px 20px;
+        font-size: 1rem;
       }
     }
   </style>
