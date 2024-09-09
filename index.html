@@ -1,120 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="/img/DK.ico">
-  <title>Dylan Kennedy | Portfolio</title>
-  <style>
-    /* General Styles */
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #000;
-      color: #333;
-      margin: 0;
-    }
-
-    /* Navbar Styles */
-    #navbar {
-      background-color: #0edacf;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      padding: 10px 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 4px solid #000;
-      z-index: 1000;
-    }
-
-    #navbar h1 {
-      margin: 0;
-      font-size: 28px;
-      text-align: center;
-      flex-grow: 1;
-    }
-
-    #navbar a {
-      color: #fff;
-      text-align: center;
-      padding: 14px 20px;
-      font-size: 18px;
-      text-decoration: none;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    #navbar a:hover {
-      background-color: #585858;
-      color: #0edacf;
-    }
-
-    /* Hero Section */
-    .hero-section {
-      height: 100vh;
-      background: url('img/Dylan.jpeg') no-repeat center;
-      background-position: center 20%;
-      background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      position: relative;
-    }
-
-    .hero-section h1 {
-      font-size: 3rem;
-      font-weight: bold;
-      margin: 0;
-      padding: 0 20px;
-    }
-
-    .hero-section p {
-      font-size: 1.5rem;
-      margin: 20px 0;
-      padding: 0 20px;
-    }
-
-    .buttons {
-      margin-top: 30px;
-    }
-
-    .buttons a {
-      text-decoration: none;
-      color: #fff;
-      background-color: #0071e3;
-      padding: 15px 30px;
-      font-size: 1.2rem;
-      border-radius: 50px;
-      margin: 0 10px;
-      transition: background-color 0.3s ease;
-    }
-
-    .buttons a:hover {
-      background-color: #005bb5;
-    }
-
-    /* Info Section */
-    .info-section {
-      padding: 80px 20px;
-      background-color: #f7f7f7;
-      text-align: center;
-    }
-
-    .info-section h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #333;
-    }
-
-    .info-section p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      max-width: 900px;
-      margin: 0 auto;
-      color: #555;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dylan's Portfolio</title>
+<style>
+  /* General Styles */
+  body {
+    font-family: Helvetica, sans-serif;
+    background-color: #585858;
+    margin: 0;
+    color: white;
+  }
+  /* Navbar Styles */
+  #navbar {
+    background-color: #0edacf;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    border-bottom: solid 4px #585858;
+  }
+  #navbar a {
+    color: white;
+    text-align: center;
+    float: right;
+    padding: 14px 30px;
+    font-size: 25px;
+    text-decoration: none;
+    transition: background-color 0.7s ease, color 0.7s ease;
+  }
+  #navbar a:hover {
+    background-color: #585858;
+    color: #0edacf;
+  }
+  /* Welcome Section Styles */
+  #welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-top: 150px;
+    margin-bottom: 300px; /* Increased margin */
+    overflow: hidden;
+  }
+  .welcome-text {
+    margin-top: 100px;
+    width: 45%; /* Adjusted width */
+  }
+  .welcome-image {
+    margin-top: 150px;
+    width: 45%; /* Adjusted width */
+    text-align: right; /* Align image to the right */
+  }
+  .welcome-image img {
+    width: 100%;
+    border: 7px solid #0edacf;
+    border-radius: 50%;
 
     /* Project Section */
     #projects {
