@@ -259,11 +259,45 @@
     <div class="project-container">
       <div class="project-description">
         <h3>Brain Tumor Detection Model</h3>
-        <p>The brain tumor detection model utilizes a pre-trained ResNet-50 convolutional neural network (CNN) in PyTorch to classify MRI images into four categories: Glioma, Meningioma, NoTumor, and Pituitary.</p>
+        <p>This project involves developing a deep learning model to automatically detect brain tumors using MRI images. The model is designed to classify images into four categories: glioma tumor, meningioma tumor, no tumor, and pituitary tumor.
+
+Data Processing: The images are first prepared by resizing them and converting them into a format suitable for the model. The data is split into a training set, used to train the model, and a validation set, used to test the model's performance.
+
+Model Architecture: A pre-trained ResNet-50, a powerful image recognition model, is used and fine-tuned for this specific task. The model has been adapted to classify brain MRI images into the four categories mentioned above.
+
+Training: The model is trained on a dataset of labeled MRI images, where it learns to identify different types of brain tumors. During training, the model’s accuracy and loss (error) are tracked to ensure that it’s improving over time.
+
+Evaluation: After training, the model is evaluated using new, unseen images. A confusion matrix is used to assess how well the model distinguishes between the different tumor types. This helps to identify which types of tumors are being accurately classified and which are more challenging for the model.
+
+Goal: The ultimate goal of the project is to create a reliable, automated tool that can assist doctors in detecting brain tumors early, potentially improving patient outcomes by providing faster and more accurate diagnoses.
+
+This project showcases how artificial intelligence can be applied in the medical field to enhance diagnostic accuracy, particularly in complex areas like tumor detection.</p>
         <a class="project-tile" href="https://github.com/dckennedy301/DataScienceProject" target="_blank">View Code</a>
       </div>
       <div class="project-image">
         <img src="img/tumour.png" alt="Brain Tumor Detection Model">
+      </div>
+    </div>
+    
+    <!-- Robotics Project  -->
+    <div class="project-container">
+      <div class="project-description">
+        <h3>Semi Autonomous Surveillance Robot</h3>
+        <p>The Semi-Autonomous Surveillance Robot project is designed to combine real-time object detection with manual and autonomous robotic control. Built using a Raspberry Pi, the robot leverages computer vision to track and follow a person while providing manual override capabilities through an Xbox controller.
+
+The system employs TensorFlow Lite object detection to identify individuals using a live camera feed. When the robot identifies a person, it tracks their movement, adjusting its direction and speed based on the person’s position in the frame and distance from the robot. The motors driving the robot are controlled via GPIO pins, and pulse-width modulation (PWM) allows for smooth speed control.
+
+Key features include:
+
+Autonomous Tracking Mode: The robot can detect and follow a person, moving forward or backward depending on their distance and turning based on their location in the camera frame.
+Manual Control: Using an Xbox controller, the user can manually override the robot’s movement, controlling direction and speed.
+Object Detection: The robot uses the EfficientDet Lite model for person detection, with TensorFlow Lite enabling edge computing, ensuring efficient processing on the Raspberry Pi.
+Robust Motor Control: The system uses dual motors to control movement, with precise turning and speed adjustment.
+This project demonstrates the integration of AI-based vision with physical robotics, creating a semi-autonomous system that can switch between manual and automatic modes, making it ideal for surveillance or tracking applications.</p>
+        <a class="project-tile" href="https://github.com/dckennedy301/Semi-Autonomous-Surveillance-Robot" target="_blank">View Code</a>
+      </div>
+      <div class="project-image">
+        <img src="img/Robot.jpg" alt="Semi Autonomous Surveillance Robot">
       </div>
     </div>
 
@@ -271,7 +305,7 @@
     <div class="project-container">
       <div class="project-description">
         <h3>Arduino Arm</h3>
-        <p>The Arduino Arm project involves a Python script that utilizes libraries like keyboard, os, time, and pyfirmata to control a robotic arm via keyboard inputs.</p>
+        <p>This project involves building and programming a robotic arm controlled by a computer keyboard. The arm uses six servos to control different joints (waist, shoulder, elbow, wrist pitch, wrist rotation, and gripper). A Python program with the keyboard and pyFirmata libraries lets the user control the servos by pressing specific keys, allowing the arm to perform movements like opening/closing the gripper, rotating the base, and bending the joints. The goal is to create an easy-to-use robotic arm that demonstrates basic robotics and servo control, which could be expanded for more complex tasks.</p>
         <a class="project-tile" href="https://github.com/dckennedy301/Arduino_Arm/blob/main/arm.py" target="_blank">View Code</a>
       </div>
       <div class="project-image">
@@ -283,7 +317,21 @@
     <div class="project-container">
       <div class="project-description">
         <h3>Milk Price Prediction Model</h3>
-        <p>The project uses Python's pandas and scikit-learn libraries to implement a linear regression model for predicting milk prices based on weight.</p>
+        <p>The project developed a milk price prediction model using linear regression to analyze the relationship between milk can weight (in grams) and their prices. The dataset, containing 100 entries, was loaded and divided into features (weight) and target variables (price). After splitting the data into training and test sets, a linear regression model was trained, resulting in the equation 
+𝑝
+(
+𝑔
+)
+=
+0.11
+𝑔
++
+21.71
+p(g)=0.11g+21.71. This indicates that the price increases by approximately R0.11 for each additional gram.
+
+The model's performance was evaluated using 
+𝑅^2
+  scores of about 0.91 for the training set and 0.92 for the test set, demonstrating strong predictive ability. Finally, the model predicted that a 1.5 kg (1500 g) milk can would cost approximately R187.70, showcasing the model's practical application in market pricing analysis.</p>
         <a class="project-tile" href="https://github.com/dckennedy301/Milk-Price-prediction/blob/main/Milk_price_prediction_model.ipynb" target="_blank">View Code</a>
       </div>
       <div class="project-image">
@@ -295,7 +343,11 @@
     <div class="project-container">
       <div class="project-description">
         <h3>Clustering Model</h3>
-        <p>This project demonstrates clustering analysis using Python's pandas and scikit-learn libraries to group datasets into meaningful clusters.</p>
+        <p>The project involved creating a K-Means clustering model to analyze a two-dimensional dataset. After loading and visualizing the data with a scatter plot, the dataset was standardized using StandardScaler, and missing values were handled with SimpleImputer.
+
+To determine the optimal number of clusters, both silhouette scores and the elbow method were employed. Silhouette scores were calculated for cluster sizes ranging from 2 to 15, revealing the best cluster configuration based on the highest score. The elbow method confirmed this finding by plotting the within-cluster sum of squares against the number of clusters, indicating three as the optimal number.
+
+Ultimately, K-Means clustering was applied with three clusters, and the results were visualized, showcasing the project’s effectiveness in identifying patterns within the dataset.</p>
         <a class="project-tile" href="https://github.com/dckennedy301/Clustering-Model/blob/main/Clustering_Model.ipynb" target="_blank">View Code</a>
       </div>
       <div class="project-image">
@@ -307,7 +359,11 @@
     <div class="project-container">
       <div class="project-description">
         <h3>Diabetes Prediction Model</h3>
-        <p>This project builds and evaluates a k-Nearest Neighbors (KNN) classifier to predict diabetes using Scikit-Learn and other Python libraries.</p>
+        <p>The project aimed to predict diabetes using a dataset containing 768 entries with various health metrics. After loading and inspecting the dataset, missing values were handled by filling them with the mean of the respective columns. The relevant features were selected, and the data was split into training (70%) and testing (30%) sets.
+
+Feature scaling was performed using StandardScaler to standardize the data before training the model. The K-Nearest Neighbors (KNN) algorithm was used, and hyperparameter tuning was conducted using GridSearchCV to find the optimal number of neighbors. The best model was evaluated on the test set, producing an accuracy score of 69.70% and an F1 score of 53.33%.
+
+A confusion matrix was visualized to assess the model's performance in classifying diabetes outcomes. The model also included a function for user input, allowing predictions based on user-provided health metrics. When tested with user input, the model predicted whether a person has diabetes or not, demonstrating its practical application.</p>
         <a class="project-tile" href="https://github.com/dckennedy301/Diabetes-Prediction-Model/blob/main/DiabetesPrediction.ipynb" target="_blank">View Code</a>
       </div>
       <div class="project-image">
@@ -319,7 +375,7 @@
     <div class="project-container">
       <div class="project-description">
         <h3>Genetic Algorithm</h3>
-        <p>This project implements a Genetic Algorithm to solve a Traveling Salesman Problem (TSP) variant, optimizing the shortest path for a set of stations.</p>
+        <p>The genetic algorithm project aims to optimize a sequence of stations based on their coordinates to minimize travel distance. It begins with a Station class that holds information about each station, including its ID and coordinates. The project calculates the Euclidean distance between stations and employs a genetic algorithm to evolve station sequences over generations. Key techniques like selection, crossover, and mutation are used to refine the sequences, with an initial population generated for evaluation. The algorithm iterates through generations, selecting the best-performing sequences for reproduction, until an optimal sequence is identified or a set number of generations is reached. The results, including the best sequence and its travel distance, are visualized, and the project also supports loading station coordinates from a CSV file for flexibility. Overall, it effectively demonstrates how evolutionary strategies can optimize travel route planning.</p>
         <a class="project-tile" href="https://github.com/dckennedy301/Genetic-algorithms/blob/main/Genetic-algorithms.ipynb" target="_blank">View Code</a>
       </div>
       <div class="project-image">
@@ -331,7 +387,11 @@
     <div class="project-container">
       <div class="project-description">
         <h3>Malaria Detection Model Using TensorFlow</h3>
-        <p>This project builds a CNN using TensorFlow and Keras to classify cell images as parasitized or uninfected for malaria detection.</p>
+        <p>The project focuses on developing a malaria detection model using deep learning techniques. Initially, the project involved importing essential libraries and loading a dataset comprising 22,047 training images and 5,511 validation images, categorized into two classes: 'Parasitized' and 'Uninfected.' A sample of the dataset was visualized to understand the data distribution before normalizing the pixel values to enhance the model's performance.
+
+The architecture of the model was designed with three convolutional layers, each increasing in the number of filters, complemented by max-pooling and dropout layers to reduce the risk of overfitting. A dense layer with a sigmoid activation function was implemented for binary classification tasks. The model was compiled using the Adam optimizer with a learning rate of 0.0001, employing binary cross-entropy as the loss function.
+
+During training, which spanned 50 epochs, early stopping was utilized to prevent overfitting. Throughout the training process, the model's accuracy showed significant improvement, surpassing 90% by the 25th epoch. This project effectively illustrates the application of deep learning in classifying images of malaria-infected and uninfected cells.</p>
         <a class="project-tile" href="https://github.com/dckennedy301/Malaria_Model/blob/main/Malaria_Model.ipynb" target="_blank">View Code</a>
       </div>
       <div class="project-image">
